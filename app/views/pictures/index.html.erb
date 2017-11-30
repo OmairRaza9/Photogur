@@ -1,13 +1,27 @@
-<!-- <h1>Pictures</h1>
 
-<% @pictures.each do |picture| %>
+<h1>Recent 5</h1>
+<ul>
+  <% @most_recent_pictures.each do |picture| %>
   <p><%= picture.title %>, <%= picture.artist %> </p>
   <img src="<%= picture.url %>" alt="<%= picture.title %>">
-<% end %> -->
+  <% end %>
+</ul>
 
-<h1>Pictures</h1>
 
-<% @pictures.each do |picture| %>
-  <p><%= picture.title %>, <%= picture.artist %></p>
+
+
+<h1>Older than 1 months</h1>
+<ul>
+  <% @older_than_one_month.each do |picture| %>
+  <p><%= picture.title %>, <%= picture.artist %> </p>
   <img src="<%= picture.url %>" alt="<%= picture.title %>">
-<% end %>
+  <% end %>
+</ul>
+
+<h1>Pics created in the same year</h1>
+<ul>
+  <% @same_year.each do |picture| %>
+  <p><%= picture.title %>, <%= picture.artist %> </p>
+  <img src="<%= picture.url %>" alt="<%= picture.title %>">
+  <% end %>
+</ul>
